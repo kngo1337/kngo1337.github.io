@@ -1,0 +1,137 @@
+/* || General setup */
+body {
+  margin: 0;
+  padding : 0;
+  font-family: serif;
+  background-color:#92F6FF;
+  color: black;
+}
+
+/* || typography */
+
+h1, h2 {
+  padding: 0;
+  margin:0;
+}
+
+
+h1 {
+  font-family: 'Passion One';
+  font-size: 4rem;
+  font-weight:700;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px #92F6FF;
+}
+
+h2 {
+  font-family: 'Passion One' ;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+
+/* || header layout */
+
+.header {
+  background: #54ABB3;
+  color: #92F6FF;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items:center;
+  margin:0;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+.logo{
+  width:200px;
+  border-radius: 4px;
+  border: solid 1px #54ABB3;
+}
+
+
+/* || main layout */
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.content{
+  max-width: 960px;
+  justify-content: space-between;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 100%;
+}
+
+.top{
+  flex: 0 1 auto;
+  width: 200px;
+  margin-right: 15px;
+}
+
+.top p{
+  flex: 0 1 auto;
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 15px;
+  font-size: 1.2rem;
+  letter-spacing: 0.02rem;
+}
+
+.pic{
+  width: inherit;
+  border-radius: 4px;
+  border: solid 4px #ffffff;
+}
+
+.bottom {
+  max-width: 640px;
+  flex: 0 2 auto;
+  border-radius: 4px;
+  background: #ffffff;
+  padding: 15px;
+}
+
+.title {
+  font-family: "Passion One";
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 2px;
+  letter-spacing: 0.02rem;
+}
+.role {
+  font-style: italic;
+  font-size: 1rem;
+  margin-bottom: 2px;
+  letter-spacing: 0.02rem;
+}
+.respons {
+    margin-bottom: 15px;
+}
+  
+@media screen and (max-width: 1000px) {
+  .container {
+    justify-content: center;
+  }
+  
+  .top {
+    display: flex;
+    margin: 0;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 15px;
+    flex: 1 0 auto;
+  }
+  
+}
+  
+  
