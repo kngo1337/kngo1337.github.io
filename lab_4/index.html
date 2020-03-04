@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Kevin's Lab 4</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="header">Kevin's Lab 4</div>
+        <button class="button" onclick="clickMe()">
+          Click me to make a change
+        </button>
+        <div class="content">
+          <p>
+            Retro fam narwhal hoodie meggings viral bushwick yr chartreuse.
+            Chartreuse seitan banh mi selfies, woke ennui venmo craft beer. Air
+            plant tumeric retro DIY iPhone poutine. +1 gastropub chillwave,
+            cronut glossier pork belly tacos poke next level fanny pack vegan
+            jianbing lo-fi.
+          </p>
+        </div>
+        <div class="footer"></div>
+      </div>
+    </div>
+    <script>
+      var name = 'Kevin Ngo'
+      var first = name.substring(0,5)
+      var last = name.substring(6,9)
+      var nameLength = first.length + last.length
+      var thirdLet = name.charAt(2).toUpperCase()
+      var last3 = last.slice(-3)
+      function clickMe() {
+        const content = document.querySelector(".content");
+        content.innerHTML = "Hello world";
+        const p1 = document.createElement('p');
+        p1.setAttribute('class','p1')
+        document.querySelector('.content').appendChild(p1)
+        const p2 = document.createElement('p');
+        p2.setAttribute('class','p2')
+        document.querySelector('.content').appendChild(p2)
+        const h = document.createElement('three');
+        h.setAttribute('class','hd');
+        document.querySelector('.header').appendChild(h);
+        
+        p1.innerHTML = 'My name has ' +nameLength+' characters';
+        p2.innerHTML = 'The third letter character in my name is '+thirdLet+'<br/>'+last3;
+        h.innerHTML = '&nbsp '+nameLength;
+      }
+
+    </script>
+  </body>
+</html>
