@@ -1,11 +1,41 @@
-h1 {
-  font-family: helvetica, arial, sans-serif;
+/* || General setup */
+body {
+  margin: 0 auto;
+  padding : 0;
+  font-family: 'Roboto Slab';
+  background-color:#3686BF;
+  color: black;
+}
+
+/* || typography */
+h1, h2 {
+  font-family: 'Oswald', sans-serif;
   text-align: center;
 }
 
-body {
-  width: 640px;
+/* || header layout */
+.header {
+  background: #245980;
+  color: #41A1E6;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin:0;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+
+/* || main layout */
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 auto;
+}
+
+.thumb-bar{
+  width: 640px;
+  align-items: center;
 }
 
 .full-img {
@@ -40,4 +70,11 @@ button {
   width: 20%;
   float: left;
   cursor: pointer;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .container {
+    justify-content: center;
+  }
 }
