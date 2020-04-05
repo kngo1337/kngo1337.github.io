@@ -107,3 +107,16 @@ h3 {
   height: 480px;
   width: 640px;
 }
+
+button {
+  border: 0;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 10px 15px;
+  background: rgba(255, 45, 45, 0.87);
+  color: #ffffff;
+  border: 1px solid #999;
+  cursor: pointer;
+  top: 2px;
+  left: 2px;
+}
