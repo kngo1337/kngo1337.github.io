@@ -20,6 +20,7 @@
             </textarea
             ><br />
             <button id="formBtn">Submit</button>
+            <button id="getFormBtn">Get</button>
           </form>
         </div>
       </div>
@@ -49,8 +50,21 @@
           });
       }
 
+      function get(request){
+        request,preventDefault();
+        fetch("/api",{
+          method: "GET",
+        })
+        .then((res) => res.json())
+        .then((res) =>{
+          console.log(res);
+        })
+      }
+
       const formBtn = document.querySelector("#formBtn");
       formBtn.addEventListener("click", sendForm);
+      const getFormBtn = document.querySelector("#getFormBtn");
+      getFormBtn.addEventListener("click", get)
     </script>
   </body>
 </html>
