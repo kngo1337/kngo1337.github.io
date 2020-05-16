@@ -34,7 +34,7 @@
         const formToSend = new FormData(target);
 
         fetch("/api", {
-          method: "POST",
+          method: "PUT",
           headers: {
             "Content-Type": "application/json",
           },
@@ -50,21 +50,34 @@
           });
       }
 
-      function get(request){
-        request,preventDefault();
-        fetch("/api",{
+      function get(request) {
+        request.preventDefault();
+        fetch("/api", {
           method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
         })
-        .then((res) => res.json())
-        .then((res) =>{
-          console.log(res);
-        })
+          .then((res) => res.json())
+          .then((res) => {
+            console.log(res);
+            const container = document.querySelector(".container");
+            const ol = document.createElement("ol");
+            res.map((data) => {
+              const li = document.createElement("li");
+              li.innerHTML =
+                "Name: " + data.name + "<br> Interests: " + data.interests;
+              ol.append(li);
+            });
+
+            container.appendChild(ol);
+          });
       }
 
       const formBtn = document.querySelector("#formBtn");
       formBtn.addEventListener("click", sendForm);
       const getFormBtn = document.querySelector("#getFormBtn");
-      getFormBtn.addEventListener("click", get)
+      getFormBtn.addEventListener("click", get);
     </script>
   </body>
 </html>
